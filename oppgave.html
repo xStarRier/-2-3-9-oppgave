@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<!-- Lag 3 knapper som legger til tallene 2, 3 og 9 som plusses i samme variabel. Programmet skal finne ut av 
+ hvor mange ganger knappene ble trykket på og hvor mange trykk det tok å komme til “vinner-tallet” som er 55. 
+Vis tallet og knappene i html. 
+Hvis du kommer til 55, skal “Winner” komme opp, sammen med hvor mange ganger du trykket på knappene. 
+Går tallet OVER 55, skal “Game Over” dukke opp. -->
+<div id="showNum"></div>
+<button onclick="add(2)">Click to add 2</button>
+<button onclick="add(3)">Click to add 3</button>
+<button onclick="add(9)">Click to add 9</button>
+
+<script>
+// let addingNum = 0;
+let totalNum = 0; 
+let winnerNum = 55;
+let 
+
+function add(number){
+ totalNum += number
+ document.getElementById("showNum").innerHTML = totalNum; 
+ winLose()
+ console.log(totalNum)
+}
+
+ 
+function winLose(){
+ if(totalNum == winnerNum){
+   alert("CONGRATS you've won nothing but this long message!")
+} 
+else if(totalNum > winnerNum){
+   alert("Uh oh you've Lost :P")
+}
+else{
+   return
+}
+}
+</script>
+</body>
+</html>
